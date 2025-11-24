@@ -1,0 +1,276 @@
+/* --- Global Styles & Fonts --- */
+:root {
+    --primary-bg: #1a0f29;
+    --text-light: #f0e6ff;
+    --text-dark: #333;
+    --accent-purple: #9b59b6;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-light);
+    font-family: var(--font-sans);
+    margin: 0;
+    padding-top: 80px; /* Offset for fixed header */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: rgba(12, 5, 22, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-purple);
+}
+
+.book-button {
+    font-weight: 600;
+    background-color: var(--text-light);
+    color: var(--primary-bg);
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.book-button:hover {
+    background-color: var(--accent-purple);
+    color: var(--text-light);
+}
+
+
+/* --- Hero Section --- */
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/WhatsApp Image 2025-11-07 at 18.58.38.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 80px); /* Full height minus header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.hero-content .subtitle {
+    font-size: 1.2rem;
+    margin: 10px 0 25px;
+}
+
+.stylist-box {
+    border: 1px solid var(--text-light);
+    padding: 10px 25px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.book-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* --- About Section --- */
+.about-section, .vision-section {
+    padding: 60px 0;
+}
+
+.about-grid, .about-care-grid, .vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.about-text p, .about-care-text p, .vision-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(240, 230, 255, 0.9);
+}
+
+.about-care-text {
+    order: 1; /* Text on the left for the second grid */
+}
+
+.about-collage {
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.about-collage img {
+    width: 100%;
+    border-radius: 10px;
+}
+.about-collage img:first-child {
+    grid-column: 1 / 3; /* First image spans two columns */
+}
+
+
+/* --- Vision Section --- */
+.vision-grid {
+    align-items: flex-start;
+}
+.vision-image {
+    text-align: center;
+}
+.vision-image .section-title {
+    text-align: left;
+}
+.vision-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* --- Gallery Section --- */
+.gallery-section {
+    padding: 60px 0;
+}
+.gallery-grid-masonry {
+    column-count: 4;
+    column-gap: 15px;
+}
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+.gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: filter 0.3s ease;
+}
+.gallery-item:hover img {
+    filter: brightness(1.1);
+}
+
+@media (max-width: 1024px) {
+    .gallery-grid-masonry {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid-masonry {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid-masonry {
+        column-count: 1;
+    }
+}
+
+
+/* --- Footer --- */
+.footer-section {
+    background-color: #0c0516;
+    padding: 60px 0;
+    text-align: center;
+}
+.footer-grid {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    text-align: left;
+}
+
+.contact-info h3, .social-media h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.contact-info p, .social-media p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-media img {
+    width: 20px; /* Add small icons if you have them */
+}
