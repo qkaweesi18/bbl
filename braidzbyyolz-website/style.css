@@ -76,24 +76,47 @@ nav a:hover {
     color: var(--accent-purple);
 }
 
+/* Primary button styling (simple, reliable tactile press) */
 .book-button {
     font-weight: 600;
-    background-color: var(--text-light);
-    color: var(--primary-bg);
-    padding: 8px 20px;
-    border-radius: 20px;
-    transition: background-color 0.3s, color 0.3s;
+    background: #1a0f29;
+    color: #f0e6ff;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 0 rgba(0,0,0,0.08);
+    transition: transform 120ms ease, box-shadow 120ms ease, background-color 160ms ease;
 }
 
-.book-button:hover {
-    background-color: var(--accent-purple);
-    color: var(--text-light);
+.book-button:hover { background: var(--accent-purple); }
+.book-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 3px 0 rgba(0,0,0,0.06);
+}
+.book-button:focus { outline: none; box-shadow: 0 8px 0 rgba(0,0,0,0.12), 0 0 0 4px rgba(155,89,182,0.12); }
+
+/* directional slant when pressed via JS-set attribute */
+.book-button[data-press="left"] {
+    transform-origin: left center;
+    transform: perspective(700px) rotateY(-16deg) translateY(6px) translateX(3px);
+    box-shadow: 0 4px 0 rgba(0,0,0,0.06);
+}
+.book-button[data-press="right"] {
+    transform-origin: right center;
+    transform: perspective(700px) rotateY(16deg) translateY(6px) translateX(-3px);
+    box-shadow: 0 4px 0 rgba(0,0,0,0.06);
+}
+.book-button[data-press="center"] {
+    transform-origin: center center;
+    transform: perspective(700px) rotateY(0deg) translateY(6px);
+    box-shadow: 0 4px 0 rgba(0,0,0,0.06);
 }
 
 
 /* --- Hero Section --- */
 .hero {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/WhatsApp Image 2025-11-07 at 18.58.38.jpeg');
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/womanlargebraids.jpeg');
     background-size: cover;
     background-position: center;
     height: calc(100vh - 80px); /* Full height minus header */
@@ -248,29 +271,262 @@ nav a:hover {
 
 /* --- Footer --- */
 .footer-section {
-    background-color: #0c0516;
-    padding: 60px 0;
+    background-color: #0b0812; /* slightly deeper */
+    padding: 40px 0;
     text-align: center;
+    color: rgba(240,230,255,0.9);
 }
-.footer-grid {
+.contact-card {
+    max-width: 900px;
+    margin: 0 auto 12px auto;
     display: flex;
-    justify-content: center;
-    gap: 100px;
-    text-align: left;
-}
-
-.contact-info h3, .social-media h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-.contact-info p, .social-media p {
-    margin: 10px 0;
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+}
+.contact-left { text-align: left }
+.contact-title { margin: 0 0 6px 0; font-size: 1.25rem; font-weight: 600; color: var(--text-light) }
+.contact-line { margin: 0; color: rgba(240,230,255,0.9); }
+.contact-line a { color: rgba(240,230,255,0.95); text-decoration: none; font-weight:600 }
+.contact-right { text-align: right }
+.social-inline { display:flex; gap:12px; justify-content:flex-end; align-items:center }
+.social-link img { width:22px; height:22px; display:block; filter: invert(1) hue-rotate(200deg) saturate(0.6) }
+.small-muted { margin:6px 0 0 0; font-size:0.9rem; color: rgba(240,230,255,0.7) }
+.copyright { margin-top:12px; font-size:0.85rem; color: rgba(240,230,255,0.55) }
+
+@media (max-width: 700px) {
+    .contact-card { flex-direction: column; align-items: flex-start; text-align: left }
+    .contact-right { width:100%; display:flex; justify-content:space-between; align-items:center }
 }
 
-.social-media img {
-    width: 20px; /* Add small icons if you have them */
+/* --- Services cards --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+.service-card {
+    background: #fff;
+    color: var(--text-dark);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+.service-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1 1 auto;
+}
+.service-title {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+}
+.service-desc {
+    margin: 0;
+    color: rgba(51,51,51,0.85);
+    font-size: 0.95rem;
+}
+.service-meta {
+    font-size: 0.85rem;
+    color: rgba(51,51,51,0.6);
+}
+.service-body .book-button {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Service Modal --- */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+.modal.show {
+    display: flex;
+}
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+.modal-dialog {
+    position: relative;
+    max-width: 900px;
+    width: 94%;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.modal-content {
+    display: flex;
+    gap: 18px;
+}
+.modal-content img#modal-img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+.modal-body {
+    padding: 20px;
+    flex: 1 1 auto;
+}
+.modal-body h3 { margin-top: 0; }
+.modal-actions { display:flex; gap: 10px; align-items:center; margin-top:12px }
+.modal-close.secondary {
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .modal-content { flex-direction: column; }
+    .modal-content img#modal-img { width: 100%; height: 220px; }
+}
+
+/* --- Service card expanded state --- */
+.service-card.expanded {
+    background: #fff;
+}
+.service-expanded {
+    padding: 14px 16px 18px 16px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    background: #fafafa;
+}
+.service-card.expanded .service-desc {
+    display: none;
+}
+.expanded-desc {
+    margin: 0 0 8px 0;
+    color: rgba(51,51,51,0.9);
+}
+.expanded-meta {
+    color: rgba(51,51,51,0.65);
+    font-size: 0.9rem;
+}
+.expanded-actions { margin-top: 12px; display:flex; gap:10px; align-items:center }
+.service-expanded .book-button { padding: 8px 14px }
+.collapse-button { background: transparent; border: 1px solid rgba(0,0,0,0.08); padding: 8px 12px; border-radius: 8px }
+
+@media (max-width: 768px) {
+    .service-expanded { padding: 12px }
+}
+
+/* Booking form styles */
+.booking-content .modal-body { max-width: 560px; width: 100%; }
+.booking-content form { display: flex; flex-direction: column; gap: 8px }
+.booking-content label { display: flex; flex-direction: column; font-size: 0.95rem; color: #333 }
+.booking-content input[type="text"], .booking-content input[type="tel"], .booking-content textarea { padding: 8px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.08); font-size: 0.95rem }
+.booking-content .form-actions { display:flex; gap:10px; margin-top:6px }
+.form-error { color: #c00 }
+
+/* professional contact form improvements */
+.form-row { display:flex; gap:12px }
+.form-label { flex:1; display:flex; flex-direction:column; gap:6px }
+.form-label input, .form-label textarea { width:100%; box-sizing:border-box }
+.required { color: #c0392b; margin-left:4px }
+.consent { display:flex; align-items:center; gap:8px; color: rgba(0,0,0,0.75); margin-top:6px }
+.modal-content.booking-content { background: linear-gradient(180deg,#faf7ff,#fff); padding: 18px }
+.booking-content h3 { margin-top:0; color: var(--accent-purple) }
+/* primary variation used in cards and modal */
+.book-button { background: #1a0f29; color: #f0e6ff; padding: 10px 14px; border-radius: 999px; }
+.book-button:hover { background: var(--accent-purple) }
+.modal-close.secondary { background: transparent; border: 1px solid rgba(0,0,0,0.08); padding: 8px 12px }
+
+@media (max-width: 700px) {
+    .form-row { flex-direction: column }
+}
+
+/* --- Helpful Tips --- */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 18px;
+}
+.tip-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    color: var(--text-dark);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.tip-media img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+.tip-body {
+    padding: 14px;
+}
+.tip-title {
+    margin: 0 0 8px 0;
+    font-family: var(--font-serif);
+}
+.tip-body p {
+    margin: 0 0 8px 0;
+    color: rgba(51,51,51,0.85);
+}
+.tip-body ul {
+    margin: 0;
+    padding-left: 18px;
+    color: rgba(51,51,51,0.8);
+}
+.tips-cta {
+    margin-top: 14px;
+    color: rgba(240,230,255,0.9);
+}
+.tips-cta a { color: var(--accent-purple); text-decoration: none; font-weight:600 }
+
+@media (max-width: 992px) {
+    .tips-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .tips-grid { grid-template-columns: 1fr; }
+    .tip-media img { height: 200px; }
 }
