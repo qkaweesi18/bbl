@@ -117,6 +117,11 @@ nav ul.nav-links {
     padding: 0 !important;
     flex-shrink: 0 !important;
 }
+/* Push the booking button (last item) to the far right */
+nav ul.nav-links li:last-child {
+    margin-left: auto !important;
+    padding-left: 20px !important;
+}
 .mobile-menu-toggle {
     display: none;
     background: transparent;
@@ -826,18 +831,20 @@ nav a:hover::after {
 .footer-content {
     display: flex !important;
     flex-direction: row !important;
-    align-items: flex-start !important;
+    align-items: center !important;
     justify-content: space-between !important;
     text-align: left !important;
-    gap: 5px !important;
+    gap: 30px !important;
     margin-bottom: 0 !important;
 }
 
 .footer-brand {
-    order: 3 !important;
+    order: 5 !important;
+    width: 100% !important;
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
+    justify-content: center !important;
     gap: 10px !important;
     text-align: center !important;
 }
@@ -972,13 +979,13 @@ nav a:hover::after {
 }
 
 .footer-nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: flex-start !important;
-    gap: 5px !important;
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex !important;
+flex-direction: row !important;
+align-items: flex-start !important;
+gap: 15px !important;
 }
 }
 
