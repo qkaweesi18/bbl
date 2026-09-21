@@ -80,7 +80,7 @@ header {
     justify-content: space-between !important;
     align-items: center !important;
     gap: 0 !important;
-    padding: 0 20px !important;
+    padding: 0 5px !important;
     flex-wrap: nowrap !important;
     width: 100% !important;
     box-sizing: border-box !important;
@@ -98,8 +98,8 @@ header {
 }
 
 .logo img {
-    height: 32px !important;
-    width: 32px !important;
+    height: 40px !important;
+    width: 40px !important;
     border-radius: 50% !important;
     display: block !important;
     margin: 0 !important;
@@ -112,8 +112,8 @@ nav ul.nav-links {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    gap: 15px !important;
-    margin: 0 0 0 10px !important;
+    gap: 5px !important;
+    margin: 0 !important;
     padding: 0 !important;
     flex-shrink: 0 !important;
 }
@@ -256,9 +256,10 @@ nav a:hover::after {
     background-position: center;
     background-attachment: fixed;
     height: calc(100vh - 80px); /* Full height minus header */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
     align-items: center;
     text-align: center;
     padding: 20px;
@@ -419,9 +420,10 @@ nav a:hover::after {
 }
 
 .gallery-filters {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
     margin-bottom: 30px;
     flex-wrap: wrap;
 }
@@ -589,9 +591,10 @@ nav a:hover::after {
     position: relative;
     max-width: 90vw;
     max-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
 }
 
 .lightbox-image-container {
@@ -678,9 +681,10 @@ nav a:hover::after {
     bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
     background: rgba(255,255,255,0.1);
     padding: 8px 16px;
     border-radius: 25px;
@@ -737,9 +741,10 @@ nav a:hover::after {
 }
 
 .image-details {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
 }
 
 .detail-item {
@@ -820,17 +825,18 @@ nav a:hover::after {
 
 .footer-content {
     display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    gap: 30px !important;
-    margin-bottom: 40px !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+    gap: 5px !important;
+    margin-bottom: 0 !important;
 }
 
 .footer-brand {
     order: 3 !important;
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: center !important;
     gap: 10px !important;
     text-align: center !important;
@@ -879,15 +885,17 @@ nav a:hover::after {
 }
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
 }
 
 .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
     color: rgba(240,230,255,0.85);
     transition: color 0.3s ease;
 }
@@ -911,15 +919,17 @@ nav a:hover::after {
 }
 
 .social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
 }
 
 .social-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
     padding: 10px 15px;
     background: rgba(255,255,255,0.05);
     border-radius: 8px;
@@ -965,9 +975,11 @@ nav a:hover::after {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
+}
 }
 
 .footer-nav-links a {
@@ -1071,9 +1083,10 @@ nav a:hover::after {
         align-items: center;
     }
     
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
         text-align: center;
     }
     
@@ -1108,9 +1121,10 @@ nav a:hover::after {
     color: var(--text-dark);
     border-radius: 12px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1126,9 +1140,10 @@ nav a:hover::after {
 }
 .service-body {
     padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
     flex: 1 1 auto;
 }
 .service-title {
@@ -1169,9 +1184,10 @@ nav a:hover::after {
         justify-content: center;
     }
     .footer-nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 5px !important;
     }
 }
 
@@ -1303,9 +1319,10 @@ nav a:hover::after {
 }
 
 .progress-step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
     gap: 6px;
     opacity: 0.4;
     transition: opacity 0.3s;
@@ -1370,9 +1387,10 @@ nav a:hover::after {
 
 /* Service Selection */
 .service-selection {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
     margin-bottom: 16px;
 }
 
@@ -1420,9 +1438,10 @@ nav a:hover::after {
 }
 
 .time-slots {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
 }
 
 .time-slot {
@@ -1516,9 +1535,10 @@ nav a:hover::after {
     margin-top: 18px;
 }
 .tip-card {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
     color: var(--text-dark);
     border-radius: 10px;
     overflow: hidden;
