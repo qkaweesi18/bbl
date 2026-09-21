@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Braidz By Yolz</title>
+    <meta name="description" content="Braidz By Yolz - Professional hair stylist specializing in cornrows, box braids, and protective styling in Hatfield, Pretoria. Book your appointment today.">
+    <meta name="keywords" content="hair braiding, cornrows, box braids, protective styling, Pretoria, Hatfield, hair stylist, natural hair">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Braidz By Yolz - Professional Hair Stylist">
+    <meta property="og:description" content="Your hair is in great hands. Professional cornrows, box braids, and protective styling in Hatfield, Pretoria.">
+    <meta property="og:image" content="images/womanlargebraids.jpeg">
+    <meta property="og:url" content="https://braidzbyyolz.co.za">
+    <meta property="og:type" content="website">
+    
+    <title>Braidz By Yolz - Professional Hair Stylist in Pretoria</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +23,9 @@
 <body>
 
     <header>
-        <nav class="container">
-            <a href="#home" class="logo"><img src="images/favicon/website_logo.jpeg" alt="Braidz By Yolz Logo"></a>
-            <ul>
+        <nav class="nav-wrapper">
+            <a href="#home" class="logo"><img src="images/yoliswa-the-stylist.jpeg" alt="Braidz By Yolz Logo"></a>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
@@ -127,7 +137,18 @@
         <!-- Gallery Section -->
         <section id="gallery" class="gallery-section">
             <div class="container">
-                <h2 class="section-title">Gallery</h2>
+                <h2 class="section-title">Hairstyle Catalog</h2>
+                <p class="gallery-subtitle">Browse our collection of beautiful braids and styles</p>
+                
+                <!-- Category Filters -->
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-category="all">All Styles</button>
+                    <button class="filter-btn" data-category="cornrows">Cornrows</button>
+                    <button class="filter-btn" data-category="box-braids">Box Braids</button>
+                    <button class="filter-btn" data-category="creative">Creative Styles</button>
+                    <button class="filter-btn" data-category="process">Process & Care</button>
+                </div>
+                
                 <div id="gallery-grid" class="gallery-grid-masonry"></div>
             </div>
         </section>
@@ -191,22 +212,72 @@
     <!-- Footer / Contact Section -->
     <footer id="contact" class="footer-section">
         <div class="container">
-            <div class="contact-card">
-                <div class="contact-left">
-                    <h3 class="contact-title">Braidz By Yolz</h3>
-                    <p class="contact-line"><a href="tel:+27650527770">+27 65 052 7770</a></p>
-                    <p class="contact-line">Hatfield, Pretoria</p>
+            <div class="footer-content">
+
+                
+                <div class="footer-links">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#tips">Tips</a></li>
+                    </ul>
                 </div>
-                <div class="contact-right">
-                    <div class="social-inline">
-                        <a href="https://wa.me/27650527770" aria-label="WhatsApp" class="social-link"><img src="images/whatsapp-icon.svg" alt="WhatsApp"></a>
-                        <a href="https://www.tiktok.com/@braidzbyyolz" aria-label="TikTok" class="social-link"><img src="images/tiktok-icon.svg" alt="TikTok"></a>
-                        <a href="https://www.instagram.com/braidzbyyolz" aria-label="Instagram" class="social-link"><img src="images/instagram-icon.svg" alt="Instagram"></a>
+
+                <div class="footer-contact">
+                    <h4 class="footer-heading">Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <a href="tel:+27650527770">+27 65 052 7770</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Hatfield, Pretoria</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <a href="mailto:info@braidzbyyolz.co.za">info@braidzbyyolz.co.za</a>
+                        </div>
                     </div>
-                    <p class="small-muted">Prefer WhatsApp? Tap the icon to message.</p>
                 </div>
+                
+                <div class="footer-social">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://wa.me/27650527770" aria-label="WhatsApp" class="social-link whatsapp-link">
+                            <img src="images/whatsapp-icon.svg" alt="WhatsApp">
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@braidzbyyolz" aria-label="TikTok" class="social-link tiktok-link">
+                            <img src="images/tiktok-icon.svg" alt="TikTok">
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://www.instagram.com/braidzbyyolz" aria-label="Instagram" class="social-link instagram-link">
+                            <img src="images/instagram-icon.svg" alt="Instagram">
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+                        <div class="footer-brand">
+                            <div class="footer-logo">
+                                <img src="images/yoliswa-the-stylist.jpeg" alt="Yoliswa, the stylist">
+                            </div>
+                            <h3 class="contact-title">Braidz By Yolz</h3>
+                            <p class="footer-tagline">Your hair is in great hands</p>
+                        </div>
+            
+                        <div class="footer-cta">
+                <p class="footer-cta-text">Ready to transform your look?</p>
+                <a href="#services" class="book-button cta-button">Book Your Appointment</a>
             </div>
-            <p class="copyright">© <span id="year"></span> Braidz By Yolz — All rights reserved.</p>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© <span id="year"></span> Braidz By Yolz — All rights reserved.</p>
+                <p class="footer-credits">Made with ❤️ for beautiful hair</p>
+            </div>
         </div>
     </footer>
 
@@ -220,56 +291,184 @@
             <div class="modal-content booking-content">
                 <div class="modal-body">
                     <h3 id="booking-modal-title">Book an appointment</h3>
+                    
+                    <!-- Progress indicator -->
+                    <div class="booking-progress">
+                        <div class="progress-step active" data-step="1">
+                            <span class="step-number">1</span>
+                            <span class="step-label">Service</span>
+                        </div>
+                        <div class="progress-step" data-step="2">
+                            <span class="step-number">2</span>
+                            <span class="step-label">Date & Time</span>
+                        </div>
+                        <div class="progress-step" data-step="3">
+                            <span class="step-number">3</span>
+                            <span class="step-label">Details</span>
+                        </div>
+                        <div class="progress-step" data-step="4">
+                            <span class="step-number">4</span>
+                            <span class="step-label">Confirm</span>
+                        </div>
+                    </div>
+
                     <form id="booking-form">
                         <input type="hidden" name="service" id="booking-service" value="">
-                        <div class="form-row">
-                            <label class="form-label">
-                                Your name <span class="required">*</span>
-                                <input type="text" id="booking-name" name="name" required placeholder="Full name" aria-required="true" />
-                            </label>
-                            <label class="form-label">
-                                Email (optional)
-                                <input type="email" id="booking-email" name="email" placeholder="you@example.com" />
-                            </label>
+                        
+                        <!-- Step 1: Service Selection -->
+                        <div class="booking-step active" data-step="1">
+                            <h4>Select a service</h4>
+                            <div class="service-selection">
+                                <label class="service-option">
+                                    <input type="radio" name="service-option" value="Cornrows & Creative Braids" data-price="From R150/hr • 1–4 hrs">
+                                    <div class="service-option-card">
+                                        <div class="service-option-title">Cornrows & Creative Braids</div>
+                                        <div class="service-option-price">From R150/hr • 1–4 hrs</div>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service-option" value="Box Braids / Extensions" data-price="From R200/hr • 2–8 hrs">
+                                    <div class="service-option-card">
+                                        <div class="service-option-title">Box Braids / Extensions</div>
+                                        <div class="service-option-price">From R200/hr • 2–8 hrs</div>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service-option" value="Wash, Treatment & Styling" data-price="R120 • 45–60 mins">
+                                    <div class="service-option-card">
+                                        <div class="service-option-title">Wash, Treatment & Styling</div>
+                                        <div class="service-option-price">R120 • 45–60 mins</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="book-button next-step">Next →</button>
+                            </div>
                         </div>
 
-                        <div class="form-row">
+                        <!-- Step 2: Date & Time -->
+                        <div class="booking-step" data-step="2">
+                            <h4>Choose preferred date & time</h4>
+                            <div class="form-row">
+                                <label class="form-label">
+                                    Preferred date
+                                    <input type="date" id="booking-date" name="date" min="" />
+                                </label>
+                                <label class="form-label">
+                                    Preferred time
+                                    <input type="time" id="booking-time" name="time" />
+                                </label>
+                            </div>
+                            <div class="time-slots">
+                                <p class="time-slots-label">Quick select:</p>
+                                <button type="button" class="time-slot" data-time="09:00">9:00 AM</button>
+                                <button type="button" class="time-slot" data-time="10:00">10:00 AM</button>
+                                <button type="button" class="time-slot" data-time="11:00">11:00 AM</button>
+                                <button type="button" class="time-slot" data-time="13:00">1:00 PM</button>
+                                <button type="button" class="time-slot" data-time="14:00">2:00 PM</button>
+                                <button type="button" class="time-slot" data-time="15:00">3:00 PM</button>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="modal-close secondary prev-step">← Back</button>
+                                <button type="button" class="book-button next-step">Next →</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Personal Details -->
+                        <div class="booking-step" data-step="3">
+                            <h4>Your contact details</h4>
+                            <div class="form-row">
+                                <label class="form-label">
+                                    Your name <span class="required">*</span>
+                                    <input type="text" id="booking-name" name="name" required placeholder="Full name" aria-required="true" />
+                                </label>
+                                <label class="form-label">
+                                    Email (optional)
+                                    <input type="email" id="booking-email" name="email" placeholder="you@example.com" />
+                                </label>
+                            </div>
                             <label class="form-label">
                                 Phone number (WhatsApp) <span class="required">*</span>
                                 <input type="tel" id="booking-phone" name="phone" placeholder="+277XXXXXXXX" aria-required="true" required />
                             </label>
                             <label class="form-label">
-                                Preferred date & time
-                                <input type="datetime-local" id="booking-datetime" name="datetime" />
+                                Notes / Requests
+                                <textarea id="booking-notes" name="notes" rows="3" placeholder="Any preferences, allergies, or additional info"></textarea>
                             </label>
+                            <label class="consent">
+                                <input type="checkbox" id="booking-consent" name="consent" checked />
+                                I consent to be contacted via WhatsApp about this booking.
+                            </label>
+                            <div class="form-actions">
+                                <button type="button" class="modal-close secondary prev-step">← Back</button>
+                                <button type="button" class="book-button next-step">Next →</button>
+                            </div>
+                            <p id="booking-error" class="form-error" style="display:none;"></p>
                         </div>
 
-                        <label class="form-label">
-                            Notes / Requests
-                            <textarea id="booking-notes" name="notes" rows="3" placeholder="Any preferences, allergies, or additional info"></textarea>
-                        </label>
-
-                        <label class="consent">
-                            <input type="checkbox" id="booking-consent" name="consent" checked />
-                            I consent to be contacted via WhatsApp about this booking.
-                        </label>
-
-                        <div class="form-actions">
-                            <button type="submit" class="book-button">Preview & Send</button>
+                        <!-- Step 4: Confirmation -->
+                        <div class="booking-step" data-step="4">
+                            <h4>Confirm your booking</h4>
+                            <div class="booking-summary">
+                                <div class="summary-item">
+                                    <span class="summary-label">Service:</span>
+                                    <span class="summary-value" id="summary-service">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Date & Time:</span>
+                                    <span class="summary-value" id="summary-datetime">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Name:</span>
+                                    <span class="summary-value" id="summary-name">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Phone:</span>
+                                    <span class="summary-value" id="summary-phone">-</span>
+                                </div>
+                                <div class="summary-item" id="summary-notes-container" style="display:none;">
+                                    <span class="summary-label">Notes:</span>
+                                    <span class="summary-value" id="summary-notes">-</span>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="modal-close secondary prev-step">← Back</button>
+                                <button type="button" id="booking-confirm" class="book-button">Send on WhatsApp</button>
+                            </div>
                         </div>
-                        <p id="booking-error" class="form-error" style="display:none;color:#c00;margin-top:8px;"></p>
                     </form>
-
-                    <div id="booking-preview" style="display:none; margin-top:12px;">
-                        <h4>Confirm booking details</h4>
-                        <div id="booking-preview-content" style="white-space:pre-wrap; background:#fff; padding:12px; border-radius:6px; border:1px solid rgba(0,0,0,0.06); color:#222; margin-bottom:10px;"></div>
-                        <div class="form-actions">
-                            <button id="booking-confirm" class="book-button">Send on WhatsApp</button>
-                            <button id="booking-back" class="modal-close secondary">Back</button>
-                        </div>
-                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close lightbox">×</button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Previous image">←</button>
+        <button class="lightbox-nav lightbox-next" aria-label="Next image">→</button>
+        
+        <!-- Zoom Controls -->
+        <div class="lightbox-controls">
+            <button class="zoom-btn zoom-out" aria-label="Zoom out">−</button>
+            <span class="zoom-level">100%</span>
+            <button class="zoom-btn zoom-in" aria-label="Zoom in">+</button>
+            <button class="zoom-btn zoom-reset" aria-label="Reset zoom">↺</button>
+        </div>
+        
+        <!-- Image Info -->
+        <div class="lightbox-info">
+            <div class="image-details">
+                <span class="detail-item"><strong>Style:</strong> <span id="image-style">-</span></span>
+                <span class="detail-item"><strong>Category:</strong> <span id="image-category">-</span></span>
+            </div>
+        </div>
+        
+        <div class="lightbox-content">
+            <div class="lightbox-image-container">
+                <img id="lightbox-image" class="lightbox-image" src="" alt="">
+            </div>
+            <div id="lightbox-caption" class="lightbox-caption"></div>
         </div>
     </div>
 </body>
