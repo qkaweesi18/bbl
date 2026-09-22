@@ -834,20 +834,21 @@ nav a:hover::after {
     flex-direction: row !important;
     align-items: center !important;
     justify-content: space-between !important;
+    flex-wrap: wrap !important;
     text-align: left !important;
     gap: 30px !important;
     margin-bottom: 0 !important;
 }
 
 .footer-brand {
-    order: 5 !important;
-    width: 100% !important;
+    order: 2 !important;
+    width: auto !important;
+    margin-left: 20px !important;
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: center !important;
     gap: 10px !important;
-    text-align: center !important;
 }
 
 .footer-logo img {
@@ -980,13 +981,13 @@ nav a:hover::after {
 }
 
 .footer-nav-links {
-list-style: none;
-padding: 0;
-margin: 0;
-display: flex !important;
-flex-direction: row !important;
-align-items: flex-start !important;
-gap: 15px !important;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 30px !important;
 }
 }
 
