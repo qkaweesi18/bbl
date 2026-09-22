@@ -90,11 +90,8 @@ header {
 .logo {
     margin: 0 !important;
     padding: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-shrink: 0 !important;
-    height: 100% !important;
+    align-self: center !important;
+    margin-top: 5px !important;
 }
 
 .logo img {
@@ -112,17 +109,14 @@ nav ul.nav-links {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    gap: 5px !important;
+    gap: 20px !important; /* increased spacing */
     margin: 0 !important;
     padding: 0 !important;
     flex-shrink: 0 !important;
+    margin-left: auto !important; /* push links to the right */
 }
-/* Push the booking button (last item) to the far right */
-nav ul.nav-links li:last-child {
-    margin-left: auto !important;
-    padding-left: 20px !important;
-}
-.mobile-menu-toggle {
+/* Removed auto‑push for the last item – all links stay in a single line */
+
     display: none;
     background: transparent;
     border: none;
@@ -214,6 +208,13 @@ nav a::after {
 
 nav a:hover::after {
     width: 100%;
+}
+
+/* Navigation logo container */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
 }
 
 /* Primary button styling (simple, reliable tactile press) */
