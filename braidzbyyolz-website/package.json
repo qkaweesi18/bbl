@@ -1,0 +1,16 @@
+{
+  "name": "braidzbyyolz-website",
+  "version": "1.0.0",
+  "description": "This repo includes a small Node script to normalize image filenames in `images/` and generate `images/gallery.json` used by the front-end gallery.",
+  "main": "script.js",
+  "scripts": {
+    "start": "live-server --port=5000 --watch=./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

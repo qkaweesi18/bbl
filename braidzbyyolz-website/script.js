@@ -444,7 +444,55 @@ document.addEventListener('DOMContentLoaded', () => {
     // (Removed directional press handlers to keep buttons simple and reliable)
 });
 
-// Inline expansion for service cards (click to expand details)
+// Service card click opens a modal with more details
+(function () {
+    const cards = document.querySelectorAll('.service-card');
+    if (!cards || !cards.length) return;
+
+    const serviceModal = document.getElementById('service-modal');
+    const modalTitle = document.getElementById('service-modal-title');
+    const modalDetails = document.getElementById('service-modal-details');
+    const modalClose = serviceModal.querySelector('.lightbox-close');
+
+    function openModal(card) {
+        const titleEl = card.querySelector('.service-title');
+        const title = titleEl ? titleEl.textContent.trim() : '';
+        const details = card.getAttribute('data-details') || '';
+        modalTitle.textContent = title;
+        modalDetails.textContent = details;
+        serviceModal.classList.add('show');
+        serviceModal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeModal() {
+        serviceModal.classList.remove('show');
+        serviceModal.setAttribute('aria-hidden', 'true');
+    }
+
+    cards.forEach(card => {
+        // Open modal on click (except when clicking a book button inside the card)
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('.book-button')) return; // let booking handle its own click
+            openModal(card);
+        });
+        // Keyboard accessibility (Enter or Space triggers modal)
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                if (e.target.closest('.book-button')) return;
+                openModal(card);
+            }
+        });
+    });
+
+    // Close modal via close button or Escape key
+    modalClose.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && serviceModal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+})();
 (function () {
     const cards = document.querySelectorAll('.service-card');
     if (!cards || !cards.length) return;
