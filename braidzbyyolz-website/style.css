@@ -212,9 +212,13 @@ nav a:hover::after {
 
 /* Navigation logo container */
 .logo-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
+    display: flex !important;
+    align-items: center !important;
+    margin-right: 15px;
+}
+.logo-container img {
+    margin-top: 5px !important;
+    height: 40px;
 }
 
 /* Primary button styling (simple, reliable tactile press) */
@@ -841,9 +845,10 @@ nav a:hover::after {
 }
 
 .footer-brand {
-    order: 2 !important;
+    order: 0 !important;
     width: auto !important;
-    margin-left: 20px !important;
+    margin-left: 0 !important;
+    margin-right: 20px !important;
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
