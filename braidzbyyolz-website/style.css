@@ -834,7 +834,7 @@ nav a:hover::after {
     flex-direction: row !important;
     align-items: center !important;
     justify-content: space-between !important;
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
     text-align: left !important;
     gap: 30px !important;
     margin-bottom: 0 !important;
