@@ -1126,13 +1126,12 @@ nav a:hover::after {
 
 /* --- Services cards --- */
 .services-grid {
-    display: flex !important;
-    flex-direction: row !important;
-    overflow-x: auto;
-    gap: 16px !important;
-    margin-top: 24px;
-    padding-bottom: 10px;
+display: flex !important;
+flex-direction: column !important;
+gap: 24px !important;
+margin-top: 24px;
 }
+
 .service-card {
     background: #fff;
     color: var(--text-dark);
@@ -1143,9 +1142,8 @@ nav a:hover::after {
     align-items: flex-start !important;
     gap: 5px !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 0 0 auto;
-    width: 300px;
-    max-width: 90%;
+    width: 100%;
+    max-width: none;
 }
 
 .service-card:hover {
