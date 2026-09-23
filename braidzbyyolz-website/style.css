@@ -431,9 +431,10 @@ nav a:hover::after {
 
 .gallery-filters {
     display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 5px !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
     margin-bottom: 30px;
     flex-wrap: wrap;
 }
@@ -1125,10 +1126,12 @@ nav a:hover::after {
 
 /* --- Services cards --- */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto;
+    gap: 16px !important;
     margin-top: 24px;
+    padding-bottom: 10px;
 }
 .service-card {
     background: #fff;
@@ -1140,6 +1143,9 @@ nav a:hover::after {
     align-items: flex-start !important;
     gap: 5px !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 auto;
+    width: 300px;
+    max-width: 90%;
 }
 
 .service-card:hover {
