@@ -1303,6 +1303,19 @@ margin-top: 24px;
 
 /* Booking form styles */
 .booking-content .modal-body { max-width: 600px; width: 100%; }
+
+/* Booking illustration styling */
+.booking-illustration {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.booking-illustration img {
+    max-width: 200px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
 .booking-content form { display: flex; flex-direction: column; gap: 8px }
 .booking-content label { display: flex; flex-direction: column; font-size: 0.95rem; color: #333 }
 .booking-content input[type="text"], .booking-content input[type="tel"], .booking-content input[type="email"], .booking-content input[type="date"], .booking-content input[type="time"], .booking-content textarea { padding: 10px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.08); font-size: 0.95rem; transition: border-color 0.2s; }
